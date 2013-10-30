@@ -95,10 +95,17 @@ module JavaBuildpack::Util
 
     HTTP_ERRORS = [
         EOFError,
+        Errno::ECONNABORTED,
         Errno::ECONNREFUSED,
         Errno::ECONNRESET,
+        Errno::EHOSTDOWN,
         Errno::EHOSTUNREACH,
         Errno::EINVAL,
+        Errno::ENETDOWN,
+        Errno::ENETRESET,
+        Errno::ENETUNREACH,
+        Errno::ENONET,
+        Errno::ENOTCONN,
         Errno::EPIPE,
         Errno::ETIMEDOUT,
         Net::HTTPBadResponse,
